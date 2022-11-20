@@ -1,1 +1,60 @@
-<p>buscar-usuario works!</p>
+<a routherLink="/administracion/crear-usuario">Nuevo usuario</a>
+<table class="table responsive">
+<thead>
+    <tr>
+        <th>
+            Cedula
+        </th>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Apellido
+        </th>
+        <th>
+            Telefono
+        </th>
+        <th>
+            Correo
+        </th>
+        <th>
+            Rol
+        </th>
+        <th>
+            Editar
+        </th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let p of listadoRegistros">
+        <td>
+            {{p.cedula}}
+        </td>
+        <td>
+            {{p.nombre}}
+        </td>
+        <td>
+            {{p.apellido}}
+        </td>
+        <td>
+            {{p.telefono}}
+        </td>
+        <td>
+            {{p.correo}}
+        </td>
+        <td>
+            <select name="rol" id="rol">
+                <option value="admin">Administrador</option>
+                <option value="asesor">Asesor</option>
+                <option value="cliente">Cliente</option>
+              </select>
+        </td>
+        <td>
+            <a routerLink="/administracion/editar-usuario/{{p.id}}" class="btn">Editar usuario</a>
+        </td>
+
+    </tr>
+
+</tbody>
+
+</table>
