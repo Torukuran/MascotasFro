@@ -43,11 +43,7 @@
             {{p.correo}}
         </td>
         <td>
-            <select name="rol" id="rol">
-                <option value="admin">Administrador</option>
-                <option value="asesor">Asesor</option>
-                <option value="cliente">Cliente</option>
-              </select>
+            {{p.rol}}
         </td>
         <td>
             <a routerLink="/administracion/editar-usuario/{{p.id}}" class="btn">Editar usuario</a>

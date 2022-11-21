@@ -14,6 +14,7 @@ export class BuscarUsuarioComponent implements OnInit {
   constructor(private usuario: UsuarioService) { }
 
   ngOnInit(): void {
+    this.obtenerListadoUsuarios();
   }
 
   obtenerListadoUsuarios(){

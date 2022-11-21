@@ -4,7 +4,7 @@
             <h5 class="center-align">Login</h5>
         </div>
     </div>
-    <form [formGroup]= "fgValidador" (ngSubmit)= "identificarUsuario()">
+    <form [formGroup]="fgValidador" (ngSubmit)="identificarUsuario()">
         <div class="row">
             <div class="col s12 m4 l4 offset-m4 offset-l4">
                 <div class="input-field col s12 m12 l12">
@@ -14,7 +14,7 @@
                 </div>
                 <div class="input-field col s12 m12 l12">
                     <i class="material-icons prefix">vpn_key</i>
-                    <input formControlName="contrasena" id="pass" type="password" class="validate">
+                    <input formControlName="contrasena" id="contrasena" type="pass" class="validate">
                     <label for="pass">Contraseña</label>
                 </div>
             </div>

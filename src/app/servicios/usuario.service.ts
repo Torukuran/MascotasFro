@@ -18,6 +18,11 @@ export class UsuarioService {
   obtenerRegistros(): Observable<modeloUsuario[]>{
     return this.http.get<modeloUsuario[]>(`${this.url}/usuarios`)
   }
+
+  obtenerRegistrosPorId(id:String): Observable<modeloUsuario>{
+    return this.http.get<modeloUsuario>(`${this.url}/usuarios/${id}`);
+  }
+
   
   crearUsuario(usuario: modeloUsuario): Observable<modeloUsuario>{
     return this.http.post<modeloUsuario>(`${this.url}/usuarios`, usuario, {
@@ -28,7 +33,7 @@ export class UsuarioService {
   }
 
   actualizarUsuario(usuario: modeloUsuario): Observable<modeloUsuario>{
-    return this.http.put<modeloUsuario>(`${this.url}/usuarios`, usuario, {
+    return this.http.put<modeloUsuario>(`${this.url}/usuarios/${usuario.id}`, usuario, {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`
       })

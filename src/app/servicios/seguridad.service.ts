@@ -31,10 +31,10 @@ obtenerDatosUsuarioEnSesion(){
   return this.datosUsuarioEnSesion.asObservable();
 }
 
-identificar(usuario: string, clave: string): Observable<modeloIdentificar>{
+identificar(usuario: string, contrasena: string): Observable<modeloIdentificar>{
   return this.http.post<modeloIdentificar>(`${this.url}/identificarUsuario`,{
     usuario: usuario,
-    clave: clave
+    contrasena: contrasena
   },{
     headers: new HttpHeaders({
 
