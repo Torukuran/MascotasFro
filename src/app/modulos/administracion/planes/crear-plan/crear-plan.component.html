@@ -1,1 +1,28 @@
-<p>crear-plan works!</p>
+<div class="row">
+    <h3 class="center-align">Crear Plan</h3>
+    <article class="clo s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="guardarPlan()" method="POST" action="formulario-contacto.php" >
+            <div class="input-field">
+                <label for="nombre" class="active">Nombre</label>
+                <input formControlName="nombre" type="text" name="nombre" required>
+            </div>
+            <div class="input-field">
+                <label for="descripcion" class="active">Descripción</label>
+                <input formControlName="descripcion" type="text" name="descripcion" required>
+            </div>
+            <div class="input-field">
+                <label for="precio" class="active">Precio</label>
+                <input formControlName="precio" type="text" name="precio" required>
+            </div>
+
+            <p class="center-align">
+                <button [disabled]="!fgValidador.valid" type="submit" class="waves-effect waves-light btn">
+                    Guardar</button>
+
+            </p>
+
+        </form>
+
+    </article>
+
+</div>

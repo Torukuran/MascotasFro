@@ -27,9 +27,9 @@ export class IdentificacionComponent implements OnInit {
   identificarUsuario(){
     let usuario = this.fgValidador.controls["usuario"].value;
     let contrasena = this.fgValidador.controls["contrasena"].value;
-
-    let claveCifrada = cryptoJS.MD5(contrasena).toString();
-    this.servicioSeguridad.identificar(usuario, claveCifrada).subscribe((datos:any) => {
+    
+    //*let claveCifrada = cryptoJS.MD5(contrasena).toString();*//
+    this.servicioSeguridad.identificar(usuario, contrasena).subscribe((datos:any) => {
       this.servicioSeguridad.almacenarSesion(datos);
       this.router.navigate(["/inicio"]);
     },(error: any)=> {

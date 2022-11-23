@@ -1,1 +1,37 @@
-<p>editar-mascota works!</p>
+<div class="row">
+    <h3 class="center-align">Crear mascota</h3>
+    <article class="clo s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="editarMascota()" method="POST">
+            <input type="hidden"formControlName="id" />
+            <div class="input-field">
+                <label for="nombre" class="active">Nombre</label>
+                <input formControlName="nombre" type="text" name="nombre" required>
+            </div>
+            <div class="input-field">
+                <label for="foto" class="active">Foto</label>
+                <input formControlName="foto" type="text" name="foto" required>
+            </div>
+            <div class="input-field">
+                <label for="estado" class="active">Estado</label>
+                <input input formControlName="estado" type="text" name="estado" required>
+            </div>
+            <div class="input-field">
+                <label for="especie" class="active">Especie</label>
+                <input formControlName="especie" type="text" name="especie" required>
+            </div>
+            <div class="input-field">
+                <label for="comentario" class="active">Comentario</label>
+                <input formControlName="comentario" type="text" name="comentario" required>
+            </div>
+
+            <p class="center-align">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
+                    <i class="material-icons right"></i>Enviar</button>
+
+            </p>
+
+        </form>
+
+    </article>
+
+</div>

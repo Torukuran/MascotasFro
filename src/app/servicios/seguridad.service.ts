@@ -32,6 +32,8 @@ obtenerDatosUsuarioEnSesion(){
 }
 
 identificar(usuario: string, contrasena: string): Observable<modeloIdentificar>{
+  alert(usuario);
+  alert(contrasena);
   return this.http.post<modeloIdentificar>(`${this.url}/identificarUsuario`,{
     usuario: usuario,
     contrasena: contrasena

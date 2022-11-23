@@ -1,1 +1,32 @@
-<p>editar-sucursal works!</p>
+<div class="row">
+    <h3 class="center-align">Editar Sucursal</h3>
+    <article class="clo s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="editarSucursal()" method="POST" action="formulario-contacto.php">
+            <input type="hidden" formControlName="id"/>
+            <div class="input-field">
+                <label for="departamento" class="active">Departamento</label>
+                <input formControlName="departamento" type="text" name="departamento" required>
+            </div>
+            <div class="input-field">
+                <label for="ciudad" class="active">Ciudad</label>
+                <input formControlName="ciudad" type="text" name="ciudad" required>
+            </div>
+            <div class="input-field">
+                <label for="direccion" class="active">Dirección</label>
+                <input formControlName="direccion" type="text" name="direccion" required>
+            </div>
+            <div class="input-field">
+                <label for="telefono" class="active">Telefono</label>
+                <input formControlName="telefono" type="text" name="telefono" required>
+            </div>
+            <p class="center-align">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
+                    <i class="material-icons right">Send</i>enviar</button>
+
+            </p>
+
+        </form>
+
+    </article>
+
+</div>

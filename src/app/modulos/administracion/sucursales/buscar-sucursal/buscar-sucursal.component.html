@@ -1,1 +1,49 @@
-<p>buscar-sucursal works!</p>
+<div class="divider"></div>
+<div class="col s12 m4 18">
+    <div></div>
+</div>
+<a routerLink= "/administracion/crear-sucursal" class="btn">Nueva Sucursal</a>
+<table class="table responsive">
+<thead>
+    <tr>
+        <th>
+            Departamento
+        </th>
+        <th>
+            Ciudad
+        </th>
+        <th>
+            Dirección
+        </th>
+        <th>
+            Telefono
+        </th>
+        <th>
+            Editar
+        </th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let p of listadoRegistros">
+        <td>
+            {{p.departamento}}
+        </td>
+        <td>
+            {{p.ciudad}}
+        </td>
+        <td>
+            {{p.direccion}}
+        </td>
+        <td>
+            {{p.telefono}}
+        </td>
+        <td>
+            <a routerLink="/administracion/editar-sucursal/{{p.id}}" class="btn">Editar sucursal</a>
+        </td>
+
+    </tr>
+
+</tbody>
+
+</table>
+

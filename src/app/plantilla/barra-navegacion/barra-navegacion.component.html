@@ -1,21 +1,26 @@
-<nav>
+<nav class="blue">
   <div class="nav-wrapper">
-    <a routerLink="/inicio" class="brand-logo">Logo</a>
-    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    <ul class="right hide-on-med-and-down">
-      <li *ngIf="inicioSesion"><a routerLink="/administracion/usuarios">Usuarios</a></li>
-      <li *ngIf="inicioSesion"><a routerLink="/administracion/listar-productos">Productos</a></li>
-      <li *ngIf="inicioSesion"><a routerLink="/seguridad/cambioClave">Cambiar clave</a></li>
-      <li *ngIf="!inicioSesion"><a routerLink="/seguridad/identificar">Login</a></li>
-      <li *ngIf="inicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesión</a></li>
-    </ul>
+    <div class="container">
+      <a routerLink="/inicio" class="brand-logo">
+        <img src="../imagenes/MascotaFelizLogo.png"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li *ngIf="inicioSesion"><a routerLink="/administracion/listar-usuarios">Usuarios</a></li>
+        <li *ngIf="inicioSesion"><a routerLink="/administracion/listar-productos">Productos</a></li>
+        <li *ngIf="inicioSesion"><a routerLink="/administracion/listar-planes">Planes</a></li>
+        <li *ngIf="inicioSesion"><a routerLink="/administracion/listar-mascotas">Mascotas</a></li>
+        <li *ngIf="!inicioSesion"><a routerLink="/seguridad/identificar">Login</a></li>
+        <li *ngIf="inicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesión</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
 <ul class="sidenav" id="mobile-demo">
   <li><a routerLink="/administracion/usuarios">Usuarios</a></li>
   <li><a routerLink="/administracion/listar-productos">Productos</a></li>
-  <li><a routerLink="/seguridad/cambioClave">Cambiar clave</a></li>
+  <li><a routerLink="/administracion/listar-planes">Planes</a></li>
+  <li><a routerLink="/administracion/listar-mascotas">Mascotas</a></li>
   <li><a routerLink="/seguridad/identificar">Login</a></li>
   <li><a routerLink="/seguridad/cerrarSesion">Cerrar Sesión</a></li>
 </ul>

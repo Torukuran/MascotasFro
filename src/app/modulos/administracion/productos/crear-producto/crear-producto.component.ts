@@ -13,10 +13,10 @@ import { ProductoService } from 'src/app/servicios/producto.service';
 export class CrearProductoComponent implements OnInit {
 
   fgValidador: FormGroup = this.fb.group({
-    'tipo':['',[Validators.required]],
-    'nombre': ['',[Validators.required]],
-    'descrpcion':['',[Validators.required]],
-    'precio': ['',[Validators.required]]
+    'tipo': ['', [Validators.required]],
+    'nombre': ['', [Validators.required]],
+    'descripcion': ['',[Validators.required]],
+    'precio':['', [Validators.required]],
   });
 
   constructor(private fb: FormBuilder,
@@ -27,22 +27,20 @@ export class CrearProductoComponent implements OnInit {
   }
 
   guardarProducto(){
-    let tipo = this.fgValidador.controls['tipo'].value;
-    let nombre = this.fgValidador.controls['nombre'].value;
-    let descripcion = this.fgValidador.controls['descripcion'].value;
+    let tipo = this.fgValidador.controls["tipo"].value;
+    let nombre = this.fgValidador.controls["nombre"].value;
+    let descripcion = this.fgValidador.controls["descripcion"].value;
     let precio = parseInt(this.fgValidador.controls['precio'].value);
-    let p= new modeloProducto();
+    let p = new modeloProducto();
     p.tipo= tipo;
     p.nombre = nombre;
-    p.descripcion= descripcion;
-    p.precio= precio;
-    this.servicioProducto.crearProducto(p).subscribe((datos: modeloProducto) =>{
-      alert("Producto almacenado");
-      this.router.navigate(['/administracion/listar-productos'])
-
-    },(error: any)=>{
-      alert("Error almacenando producto")
+    p.descripcion = descripcion;
+    p.precio = precio;
+    this.servicioProducto.crearProducto(p).subscribe((datos: modeloProducto) => {
+      alert("Producto almacenado correctamente");
+      this.router.navigate(["/administracion/listar-productos"])
+    },(error: any) => {
+      alert("Error almacenando producto");
     })
   }
-
 }

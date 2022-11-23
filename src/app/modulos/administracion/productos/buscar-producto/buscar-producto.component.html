@@ -1,4 +1,4 @@
-<a routherLink="/administracion/crear-producto">Nuevo producto</a>
+<a routerLink="/administracion/crear-producto" class="btn">Nuevo producto</a>
 <table class="table responsive">
 <thead>
     <tr>
@@ -10,6 +10,9 @@
         </th>
         <th>
             Tipo
+        </th>
+        <th>
+            Editar
         </th>
     </tr>
 </thead>
@@ -25,7 +28,7 @@
             {{p.tipo}}
         </td>
         <td>
-            <a routerLink="/administracion/editar-producto/{{p.id}}" class="btn">Editar producto</a>
+            <a routerLink="/administracion/editar-producto/{{p.id}}" class="btn" type="submit">Editar producto</a>
         </td>
 
     </tr>

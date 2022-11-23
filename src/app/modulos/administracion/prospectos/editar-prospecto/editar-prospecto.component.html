@@ -1,1 +1,38 @@
-<p>editar-prospecto works!</p>
+<div class="row">
+    <h3 class="center-align">Editar prospecto</h3>
+    <article class="clo s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="editarProspecto()" method="POST" action="formulario-contacto.php">
+            <input type="hidden" formControlName="id"/>
+            <div class="input-field">
+                <label for="nombre" class="active">Nombre</label>
+                <input formControlName="nombre" type="text" name="nombre" required>
+            </div>
+            <div class="input-field">
+                <label for="apellido" class="active">Apellido</label>
+                <input formControlName="apellido" type="text" name="apellido" required>
+            </div>
+            <div class="input-field">
+                <label for="correo" class="active">Correo</label>
+                <input formControlName="correo" type="text" name="correo" required>
+            </div>
+            <div class="input-field">
+                <label for="celular" class="active">Celular</label>
+                <input formControlName="celular" type="text" name="celular" required>
+            </div>
+            <div class="input-field">
+                <label for="comentario" class="active">Comentario</label>
+                <input formControlName="comentario" type="text" name="comentario" required>
+            </div>
+
+            <p class="center-align">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
+                    <i class="material-icons right">Send</i>enviar</button>
+
+            </p>
+
+        </form>
+
+    </article>
+
+</div>
+

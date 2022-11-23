@@ -1,4 +1,4 @@
-export class modeloMasctota{
+export class modeloMascota{
     id?: string;
     nombre?: String;
     foto?: String;

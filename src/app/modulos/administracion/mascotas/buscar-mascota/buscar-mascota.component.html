@@ -1,1 +1,47 @@
-<p>buscar-mascota works!</p>
+<a routherLink="/administracion/crear-mascota" class="btn">Nueva Mascota</a>
+<table class="table responsive">
+<thead>
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Foto
+        </th>
+        <th>
+            Estado
+        </th>
+        <th>
+            Especie
+        </th>
+        <th>
+            Comentario
+        </th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let p of listadoRegistros">
+        <td>
+            {{p.nombre}}
+        </td>
+        <td>
+            {{p.foto}}
+        </td>
+        <td>
+            {{p.estado}}
+        </td>
+        <td>
+            {{p.especie}}
+        </td>
+        <td>
+            {{p.comentario}}
+        </td>
+        <td>
+            <a routerLink="/administracion/editar-mascota/{{p.id}}" class="btn" type="submit">Editar mascota</a>
+        </td>
+
+    </tr>
+
+</tbody>
+
+</table>

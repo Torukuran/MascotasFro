@@ -1,1 +1,29 @@
-<p>editar-plan works!</p>
+<div class="row">
+    <h3 class="center-align">Crear Producto</h3>
+    <article class="clo s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="editarPlan()" method="POST"> 
+            <input type="hidden"formControlName="id" />
+            <div class="input-field">
+                <label for="nombre" class="active">Nombre</label>
+                <input type="text" name="nombre" required>
+            </div>
+            <div class="input-field">
+                <label for="descripcion" class="active">Descrpción</label>
+                <input formControlName="descripcion" type="text" name="descripcion" required>
+            </div>
+            <div class="input-field">
+                <label for="precio" class="active">Precio</label>
+                <input formControlName="precio" type="text" name="precio" required>
+            </div>
+
+            <p class="center-align">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
+                    <i class="material-icons right"></i>enviar</button>
+
+            </p>
+
+        </form>
+
+    </article>
+
+</div>

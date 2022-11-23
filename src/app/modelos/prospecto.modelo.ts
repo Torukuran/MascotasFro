@@ -1,4 +1,4 @@
-export class modelosProspecto{
+export class modeloProspecto{
     id?: String;
     nombre?: String;
     apellido?:String;

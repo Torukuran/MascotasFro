@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { modeloSucursal } from 'src/app/modelos/sucursal.modelo';
+import { SucursalService } from 'src/app/servicios/sucursal.service';
 
 @Component({
   selector: 'app-buscar-sucursal',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscarSucursalComponent implements OnInit {
 
-  constructor() { }
+  listadoRegistros: modeloSucursal[] = [];
+
+  constructor(private sucursal: SucursalService) { }
 
   ngOnInit(): void {
+    this.obtenerListadoSucursales();
+  }
+
+  obtenerListadoSucursales(){
+    this.sucursal.obtenerRegistros().subscribe((datos: modeloSucursal[]) => {
+       this.listadoRegistros = datos;
+    })
+
   }
 
 }

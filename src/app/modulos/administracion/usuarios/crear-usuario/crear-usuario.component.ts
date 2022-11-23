@@ -43,7 +43,7 @@ export class CrearUsuarioComponent implements OnInit {
     p.rol = rol;
     this.servicioUsuario.crearUsuario(p).subscribe((datos: modeloUsuario) => {
       alert("Usuario almacenado correctamente");
-      this.router.navigate(["/administracion/listar-usuario"])
+      this.router.navigate(["/administracion/listar-usuarios"])
     },(error: any) => {
       alert("Error almacenando el usuario");
     })

@@ -1,1 +1,54 @@
-<p>buscar-prospecto works!</p>
+<div class="divider"></div>
+<div class="col s12 m4 18">
+    <div></div>
+</div>
+<a routerLink= "/administracion/crear-propecto" class="btn">Nuevo Prospecto</a>
+<table class="table responsive">
+<thead>
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Apellido
+        </th>
+        <th>
+            Correo
+        </th>
+        <th>
+            Celular
+        </th>
+        <th>
+            Comentario
+        </th>
+        <th>
+            Editar
+        </th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let p of listadoRegistros">
+        <td>
+            {{p.nombre}}
+        </td>
+        <td>
+            {{p.apellido}}
+        </td>
+        <td>
+            {{p.correo}}
+        </td>
+        <td>
+            {{p.celular}}
+        </td>
+        <td>
+            {{p.comentario}}
+        </td>
+        <td>
+            <a routerLink="/administracion/editar-propecto/{{p.id}}" class="btn">Editar propspecto</a>
+        </td>
+
+    </tr>
+
+</tbody>
+
+</table>

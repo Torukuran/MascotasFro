@@ -62,7 +62,7 @@ export class EditarUsuarioComponent implements OnInit {
     p.id = this.id;
     this.servicioUsuario.actualizarUsuario(p).subscribe((datos: modeloUsuario) => {
       alert("Usuario actualizado correctamente");
-      this.router.navigate(["/administracion/listar-usuario"])
+      this.router.navigate(["/administracion/listar-usuarios"])
     },(error: any) => {
       alert("Error actualizando el usuario");
     })
