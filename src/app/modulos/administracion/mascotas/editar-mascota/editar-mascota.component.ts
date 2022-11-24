@@ -11,7 +11,7 @@ import { MascotaService } from 'src/app/servicios/mascota.service';
 })
 export class EditarMascotaComponent implements OnInit {
 
-  id:string="";
+  id:String="";
   fgValidador: FormGroup = this.fb.group({
     'id':['',[Validators.required]],
     'nombre':['',[Validators.required]],

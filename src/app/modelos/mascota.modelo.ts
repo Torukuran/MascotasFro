@@ -1,5 +1,5 @@
 export class modeloMascota{
-    id?: string;
+    id?: String;
     nombre?: String;
     foto?: String;
     estado?: String;

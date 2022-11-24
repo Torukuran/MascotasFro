@@ -15,7 +15,7 @@ export class EditarProductoComponent implements OnInit {
     'id':['',[Validators.required]],
     'tipo':['',[Validators.required]],
     'nombre': ['',[Validators.required]],
-    'descrpcion':['',[Validators.required]],
+    'descripcion':['',[Validators.required]],
     'precio': ['',[Validators.required]]
   });
 

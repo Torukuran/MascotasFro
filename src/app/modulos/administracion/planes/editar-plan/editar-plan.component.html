@@ -1,11 +1,11 @@
 <div class="row">
-    <h3 class="center-align">Crear Producto</h3>
+    <h3 class="center-align">Editar Producto</h3>
     <article class="clo s6 offset-s3">
         <form [formGroup]="fgValidador" (ngSubmit)="editarPlan()" method="POST"> 
             <input type="hidden"formControlName="id" />
             <div class="input-field">
                 <label for="nombre" class="active">Nombre</label>
-                <input type="text" name="nombre" required>
+                <input formControlName="nombre" type="text" name="nombre" required>
             </div>
             <div class="input-field">
                 <label for="descripcion" class="active">Descrpción</label>
@@ -18,7 +18,7 @@
 
             <p class="center-align">
                 <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
-                    <i class="material-icons right"></i>enviar</button>
+                    <i class="material-icons right" class="green"></i>Enviar</button>
 
             </p>
 

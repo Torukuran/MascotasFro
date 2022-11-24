@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
 import { BuscarMascotaComponent } from './mascotas/buscar-mascota/buscar-mascota.component';
 import { CrearMascotaComponent } from './mascotas/crear-mascota/crear-mascota.component';
 import { EditarMascotaComponent } from './mascotas/editar-mascota/editar-mascota.component';
@@ -28,27 +29,33 @@ import { EliminarUsuarioComponent } from './usuarios/eliminar-usuario/eliminar-u
 const routes: Routes = [
   {
     path: 'crear-mascota',
-    component: CrearMascotaComponent
+    component: CrearMascotaComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
-    path:'editar-mascota:id',
-    component: EditarMascotaComponent
+    path:'editar-mascota/:id',
+    component: EditarMascotaComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:'eliminar-mascota',
-    component: EliminarMascotaComponent
+    component: EliminarMascotaComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:'buscar-mascota',
-    component: BuscarMascotaComponent
+    component: BuscarMascotaComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:'listar-mascotas',
-    component: BuscarMascotaComponent
+    component: BuscarMascotaComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:'buscar-plan',
-    component: BuscarPlanComponent
+    component: BuscarPlanComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:'listar-planes',
@@ -56,15 +63,18 @@ const routes: Routes = [
   },
   {
     path:'crear-plan',
-    component: CrearPlanComponent
+    component: CrearPlanComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
-    path:'editar-plan:id',
-    component: EditarPlanComponent
+    path:'editar-plan/:id',
+    component: EditarPlanComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'eliminar-plan',
-    component: EliminarPlanComponent
+    component: EliminarPlanComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'listar-productos',
@@ -72,35 +82,42 @@ const routes: Routes = [
   },
   {
     path: 'buscar-producto',
-    component: BuscarProductoComponent
+    component: BuscarProductoComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:'crear-producto',
-    component: CrearProductoComponent
+    component: CrearProductoComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'editar-producto/:id',
-    component: EditarProductoComponent
+    component: EditarProductoComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'eliminar-producto',
-    component: EliminarProductoComponent
+    component: EliminarProductoComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:'buscar-prospecto',
-    component: BuscarProspectoComponent
+    component: BuscarProspectoComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'crear-prospecto',
     component: CrearProspectoComponent
   },
   {
-    path: 'editar-prospecto:id',
-    component: EditarProspectoComponent
+    path: 'editar-prospecto/:id',
+    component: EditarProspectoComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:'eliminar-prospecto',
-    component: EliminarProspectoComponent
+    component: EliminarProspectoComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:'listar-sucursales',
@@ -108,15 +125,18 @@ const routes: Routes = [
   },
   {
     path:'buscar-sucursal',
-    component: BuscarSucursalComponent
+    component: BuscarSucursalComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:'crear-sucursal',
-    component: CrearSucursalComponent
+    component: CrearSucursalComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
-    path:'editar-sucursal:id',
-    component: EditarSucursalComponent
+    path:'editar-sucursal/:id',
+    component: EditarSucursalComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:'listar-sucursales',
@@ -124,27 +144,33 @@ const routes: Routes = [
   },
   {
     path: 'eliminar-sucursal',
-    component: EliminarSucursalComponent
+    component: EliminarSucursalComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:'buscar-usuario',
-    component: BuscarUsuarioComponent
+    component: BuscarUsuarioComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'crear-usuario',
-    component: CrearUsuarioComponent
+    component: CrearUsuarioComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'editar-usuario/:id',
-    component: EditarUsuarioComponent
+    component: EditarUsuarioComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path:'eliminar-usuario',
-    component: EliminarUsuarioComponent
+    component: EliminarUsuarioComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: 'listar-usuarios',
-    component: BuscarUsuarioComponent
+    component: BuscarUsuarioComponent,
+    canActivate: [ValidadorSesionGuard]
   }
 
 ];

@@ -15,7 +15,7 @@ export class EditarPlanComponent implements OnInit {
   fgValidador: FormGroup = this.fb.group({
     'id':['',[Validators.required]],
     'nombre': ['',[Validators.required]],
-    'descrpcion':['',[Validators.required]],
+    'descripcion':['',[Validators.required]],
     'precio': ['',[Validators.required]]
   });
 

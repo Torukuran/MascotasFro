@@ -32,7 +32,6 @@ export class CrearPlanComponent implements OnInit {
     p.nombre = nombre;
     p.descripcion= descripcion;
     p.precio= precio;
-    alert(p);
     this.servicioPlan.crearPlan(p).subscribe((datos: modeloPlan) => {
       alert("Plan almacenado");
       this.router.navigate(['/administracion/listar-planes'])
