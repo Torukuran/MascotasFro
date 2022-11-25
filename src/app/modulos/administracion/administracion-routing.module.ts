@@ -155,7 +155,7 @@ const routes: Routes = [
   {
     path: 'crear-usuario',
     component: CrearUsuarioComponent,
-    canActivate: [ValidadorSesionGuard]
+
   },
   {
     path: 'editar-usuario/:id',

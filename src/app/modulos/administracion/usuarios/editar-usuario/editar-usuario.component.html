@@ -3,6 +3,7 @@
     <article class="clo s6 offset-s3">
         <form [formGroup]="fgValidador" (ngSubmit)="editarUsuario()" method="POST" action="formulario-contacto.php">
             <input type="hidden" formControlName="id"/>
+            <input type="hidden" formControlName="contrasena"/>
             <div class="input-field">
                 <label for="cedula" class="active">Cedula</label>
                 <input formControlName="cedula" type="text" name="cedula" required>

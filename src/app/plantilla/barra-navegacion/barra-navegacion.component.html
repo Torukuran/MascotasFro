@@ -2,11 +2,12 @@
   <div class="nav-wrapper">
     <div class="container">
       <a routerLink="/inicio" class="brand-logo">
-        <img class="" src="logo.png"  width="50" height="50">
+        <img class="" src="assets/imagenes/logo.png"  width="80" height="60">
       </a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li *ngIf="inicioSesion"><a routerLink="/administracion/listar-usuarios">Usuarios</a></li>
+        <li><a routerLink="/administracion/crear-usuario">Crear usuario</a></li>
         <li *ngIf="inicioSesion"><a routerLink="/administracion/listar-productos">Productos</a></li>
         <li *ngIf="inicioSesion"><a routerLink="/administracion/listar-planes">Planes</a></li>
         <li *ngIf="inicioSesion"><a routerLink="/administracion/listar-mascotas">Mascotas</a></li>

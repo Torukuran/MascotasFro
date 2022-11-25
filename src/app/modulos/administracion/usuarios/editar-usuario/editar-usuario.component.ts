@@ -19,7 +19,8 @@ export class EditarUsuarioComponent implements OnInit {
     'apellido': ['',[Validators.required]],
     'telefono':['', [Validators.required]],
     'correo': ['',[Validators.required]],
-    'rol':['', [Validators.required]]
+    'rol':['', [Validators.required]],
+    'contrasena': ['', [Validators.required]],
   });
 
   constructor(private fb: FormBuilder,
@@ -41,6 +42,7 @@ export class EditarUsuarioComponent implements OnInit {
       this.fgValidador.controls["telefono"].setValue(datos.telefono);
       this.fgValidador.controls["correo"].setValue(datos.correo);
       this.fgValidador.controls["rol"].setValue(datos.rol);
+      this.fgValidador.controls["contrasena"].setValue(datos.contrasena);
     });
 
   }
@@ -51,7 +53,8 @@ export class EditarUsuarioComponent implements OnInit {
     let apellido = this.fgValidador.controls["apellido"].value;
     let telefono = this.fgValidador.controls["telefono"].value;
     let correo = this.fgValidador.controls["correo"].value;
-    let rol = this.fgValidador.controls["rol"].value
+    let rol = this.fgValidador.controls["rol"].value;
+    let contrasena = this.fgValidador.controls["contrasena"].value;
     let p = new modeloUsuario();
     p.cedula= cedula;
     p.nombre = nombre;
