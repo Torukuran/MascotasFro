@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
+import { MisionVisionComponent } from 'src/app/plantilla/mision-vision/mision-vision.component';
 import { BuscarMascotaComponent } from './mascotas/buscar-mascota/buscar-mascota.component';
 import { CrearMascotaComponent } from './mascotas/crear-mascota/crear-mascota.component';
 import { EditarMascotaComponent } from './mascotas/editar-mascota/editar-mascota.component';
@@ -172,7 +173,6 @@ const routes: Routes = [
     component: BuscarUsuarioComponent,
     canActivate: [ValidadorSesionGuard]
   }
-
 ];
 
 @NgModule({

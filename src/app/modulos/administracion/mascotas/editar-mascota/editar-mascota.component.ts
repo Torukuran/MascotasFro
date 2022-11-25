@@ -58,7 +58,7 @@ export class EditarMascotaComponent implements OnInit {
     p.id=this.id;
     this.servicioMascota.actualizarMascota(p).subscribe((datos: modeloMascota) =>{
       alert("mascota actualizada");
-      this.router.navigate(['/administracion/listar-mascota'])
+      this.router.navigate(['/administracion/listar-mascotas'])
 
     },(error: any)=>{
       alert("Error actualizando mascota")
